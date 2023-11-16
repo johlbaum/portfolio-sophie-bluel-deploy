@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sophie Bluel - Architecte d'intérieur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Je suis Sophie Bluel, une architecte d'intérieur talentueuse spécialisée dans la création d'espaces fonctionnels et esthétiques. Explorez mes réalisations et laissez-vous séduire par mon expertise en matière de conception d'intérieurs uniques."
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="icon" href="./assets/fav/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/b14f14ea95.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/main.mjs"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="edition-mode-bar">
+        <div class="edition-mode-bar-content">
+          <i class="fa-regular fa-pen-to-square"></i>
+          <p>Mode édition</p>
+        </div>
+      </div>
+      <header>
+        <a href="index.html">
+          <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1></a
+        >
+        <nav aria-label="nav">
+          <ul>
+            <li>
+              <a href="#portfolio">projets</a>
+            </li>
+            <li>
+              <a href="#contact">contact</a>
+            </li>
+            <li>
+              <a href="login.html" class="admin-access">login</a>
+            </li>
+            <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="introduction">
+          <figure>
+            <img
+              src="./assets/images/sophie-bluel.png"
+              alt="Photographie de Sophie Bluel"
+            />
+          </figure>
+          <article>
+            <h2>Designer d'espace</h2>
+            <p>
+              Je raconte votre histoire, je valorise vos idées. Je vous
+              accompagne de la conception à la livraison finale du chantier.
+            </p>
+            <p>
+              Chaque projet sera étudié en commun, de façon à mettre en valeur
+              les volumes, les matières et les couleurs dans le respect de
+              l’esprit des lieux et le choix adapté des matériaux. Le suivi du
+              chantier sera assuré dans le souci du détail, le respect du
+              planning et du budget.
+            </p>
+            <p>
+              En cas de besoin, une équipe pluridisciplinaire peut-être
+              constituée : architecte DPLG, décorateur(trice)
+            </p>
+          </article>
+        </section>
+        <section id="portfolio">
+          <div class="works-title-and-edit">
+            <h2>Mes Projets</h2>
+            <div class="edit-works">
+              <i class="fa-regular fa-pen-to-square"></i>
+              <p>modifier</p>
+            </div>
+          </div>
+          <div class="filters"></div>
+          <div class="gallery"></div>
+        </section>
+        <aside>
+          <div class="modal-container">
+            <div class="modal-content">
+              <div class="photo-gallery-content hide show">
+                <div class="close-modal-icon">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h3>Galerie photo</h3>
+                <div class="modal-works"></div>
+                <div class="separation-line"></div>
+                <div class="modal-features">
+                  <p class="add-picture">Ajouter une photo</p>
+                  <p class="delete-all-pictures">Supprimer la galerie</p>
+                </div>
+                <p class="delete-picture-message"></p>
+              </div>
+              <div class="add-picture-content hide">
+                <div class="back-to-photo-gallery-icon">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="close-modal-icon">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h3>Ajout photo</h3>
+                <form class="send-work-form">
+                  <div class="add-img-input-container">
+                    <div class="img-input-elements">
+                      <i class="fa-regular fa-image fa-2xl"></i>
+                      <label id="file-label" for="img-input"
+                        >+ Ajouter photo</label
+                      >
+                      <input type="file" id="img-input" />
+                      <p>jpg, png : 4mo max</p>
+                    </div>
+                    <img
+                      src="#"
+                      class="img-preview"
+                      alt="Prévisualisation de l'image à ajouter"
+                    />
+                  </div>
+                  <label for="title">Titre</label>
+                  <input type="text" id="title" />
+                  <label for="category">Catégorie</label>
+                  <select id="category">
+                    <option value="" label=" "></option>
+                  </select>
+                  <div class="separation-line"></div>
+                  <input type="submit" value="Valider" id="submit-button" />
+                </form>
+                <p class="add-work-form-message"></p>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Vous avez un projet ? Discutons-en !</p>
+          <form action="#" method="post">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="submit" value="Envoyer" class="submit-form" />
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <ul>
+        <li>Mentions Légales</li>
+      </ul>
+    </footer>
+  </body>
+</html>
